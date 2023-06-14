@@ -45,6 +45,23 @@ public class Clock1 extends JFrame {
         imgLabel.setBounds(30, 215, img.getIconWidth(), 40);
         c.add(imgLabel);
         //shashini end
+
+        //maheesha start
+
+        jLabel1 = new JLabel();
+        jLabel1.setBounds(60, 5, 360, 130);
+        jLabel1.setFont(f3);
+        jLabel1.setForeground(new Color(0, 204, 51));
+        c.add(jLabel1);
+
+        jLabel3 = new JLabel();
+        jLabel3.setBounds(435, 35, 100, 110);
+        jLabel3.setFont(f2);
+        jLabel3.setForeground(new Color(0, 204, 51));
+        c.add(jLabel3);
+
+        //maheesha end
+
     }
     }
 }
