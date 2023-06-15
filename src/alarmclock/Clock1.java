@@ -95,6 +95,31 @@ public class Clock1 extends JFrame {
         c.add(btnOk);
         //Dilshara end
 
+        //tharidu start
+        btncl = new JButton("CL");
+        btncl.setBounds(370, 215, 60, 40);
+        btncl.setFont(new Font("Tahoma", Font.BOLD, 16));
+        c.add(btncl);
+
+        btnStop = new JButton("Stop");
+        btnStop.setBounds(445, 215, 75, 40);
+        btnStop.setFont(new Font("Tahoma", Font.BOLD, 16));
+        c.add(btnStop);
+
+        //Button Ok
+        btnOk.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+
+                temp_h = Integer.parseInt(tfh.getText());
+                temp_m = Integer.parseInt(tfm.getText());
+                temp_am = tfam.getText();
+                flag = 1;
+            }
+        });
+
+        //tharidu end
 
     }
     }
