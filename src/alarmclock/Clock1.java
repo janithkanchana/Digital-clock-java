@@ -78,6 +78,22 @@ public class Clock1 extends JFrame {
 
 
         //disho end
+        //Dilshara start
+        tfm = new JTextField();
+        tfm.setBounds(165, 215, 50, 40);
+        tfm.setFont(new Font("Tahoma", Font.BOLD, 20));
+        tfm.setHorizontalAlignment(JTextField.CENTER);
+        c.add(tfm);
+        tfam = new JTextField();
+        tfam.setBounds(230, 215, 50, 40);
+        tfam.setFont(new Font("Tahoma", Font.BOLD, 20));
+        tfam.setHorizontalAlignment(JTextField.CENTER);
+        c.add(tfam);
+        btnOk = new JButton("Ok");
+        btnOk.setBounds(295, 215, 60, 40);
+        btnOk.setFont(new Font("Tahoma", Font.BOLD, 16));
+        c.add(btnOk);
+        //Dilshara end
 
 
     }
