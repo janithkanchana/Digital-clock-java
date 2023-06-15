@@ -148,6 +148,30 @@ public class Clock1 extends JFrame {
     }
 
         //tivinstan end
+    //Kisara start
+        public void currentTime() {
+            Thread clock;
+            clock = new Thread() {
+                public void run() {
+                    for (;;) {
+                        Calendar cal = new GregorianCalendar();
+                        int second = cal.get(Calendar.SECOND);
+                        int minute = cal.get(Calendar.MINUTE);
+                        int hour = cal.get(Calendar.HOUR);
+                        int day = cal.get(Calendar.DAY_OF_MONTH);
+                        int month = cal.get(Calendar.MONTH) + 1;
+                        int year = cal.get(Calendar.YEAR);
+//AM_PM
+                        Calendar datetime = Calendar.getInstance();
+                        String am_pm = "";
+                        if (datetime.get(Calendar.AM_PM) == Calendar.AM) {
+                            am_pm = "AM";
+                        } else if (datetime.get(Calendar.AM_PM) == Calendar.PM) {
+                            am_pm = "PM";
+                        }
+
+
+                                        //Kisara end
 
     }
     }
