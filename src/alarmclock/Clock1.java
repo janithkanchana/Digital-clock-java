@@ -121,6 +121,34 @@ public class Clock1 extends JFrame {
 
         //tharidu end
 
+        //tivinstan start
+
+        //Stop Button
+        btnStop.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent ae) {
+                flag = 0;
+                mp3.stop();
+            }
+        });
+
+        btncl.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent ae) {
+                flag = 0;
+                tfh.setText("");
+                tfm.setText("");
+                tfam.setText("");
+
+            }
+        });
+
+
+
+    }
+
+        //tivinstan end
+
     }
     }
 }
