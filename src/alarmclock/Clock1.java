@@ -1,7 +1,7 @@
 package alarmclock;
 
 
-import javax.swing.*;
+//import jaco.mp3.player.MP3Player;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Font;
@@ -11,12 +11,12 @@ import java.io.File;
 import static java.lang.Thread.sleep;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.swing.ImageIcon;
-import java.swing.JButton;
-import java.swing.JFrame;
-import java.swing.JLabel;
-import java.swing.JOptionPane;
-import java.swing.JTextField;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 
 
@@ -37,7 +37,7 @@ public class Clock1 extends JFrame {
         initComponents();
         currentTime();
     }
-    public static final String path = "E:/_.Programming/Java/zzzzzz_____icons/beep_alarm.mp3";
+    public static final String path = "D:/JANITH/src/alarmclock/beep-01a.mp3";
     MP3Player mp3 = new MP3Player(new File(path));
 
     //shashini start
@@ -189,6 +189,35 @@ public class Clock1 extends JFrame {
                         }
 
                         //Kisara end
+
+                        //week day
+                        String[] strDays = new String[]{"Sunday", "Monday", "Tuesday", "Wednesday", "Thusday",
+                                "Friday", "Saturday"};
+                        String wd;
+                        wd = strDays[datetime.get(Calendar.DAY_OF_WEEK) - 1];
+//setting to label
+                        jLabel1.setText(hour + " : " + minute + " : " + second);
+                        jLabel2.setText(day + " - " + month + " - " + year);
+                        jLabel3.setText(am_pm);
+                        jLabel4.setText(" " + wd);
+//Alarm ---------------
+                        if (temp_h == hour && temp_m == minute && temp_am.equals(am_pm) && flag == 1) {
+                            mp3.play();
+                            if (second == 59 || flag == 0) {
+                                mp3.stop();
+                            }
+                        }
+                        try {
+                            sleep(1000);
+                        } catch (Exception e) {
+                            JOptionPane.showMessageDialog(null, e);
+                        }
+                    }
+                }
+            };
+            clock.start();
+        }
+}
 
 
 
